@@ -1,41 +1,21 @@
 import type { Metadata } from "next";
-import {
-  Fraunces,
-  Inter,
-  Playfair_Display,
-  Source_Sans_3,
-  Syne,
-} from "next/font/google";
-import DesignSwitcher from "@/components/DesignSwitcher";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
-});
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-});
-
-const sourceSans = Source_Sans_3({
-  variable: "--font-source",
-  subsets: ["latin"],
-});
-
-const syne = Syne({
-  variable: "--font-syne",
-  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "Altiora Consults — Accounting, Tax & Business Process Consulting",
+  title: "Altiora Consults — Accounting, Tax & Business Process Consultancy",
   description:
     "Altiora Consults helps businesses build strong financial foundations, maintain regulatory compliance, and improve operational efficiency through accounting, tax advisory, and business process consulting. Solutions for All.",
   keywords: [
@@ -63,12 +43,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} ${fraunces.variable} ${sourceSans.variable} ${syne.variable} h-full antialiased`}
+      className={`${inter.variable} ${cormorant.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        {children}
-        <DesignSwitcher />
-      </body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }

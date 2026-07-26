@@ -1,104 +1,87 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-const links = [
-  { href: "#firm", label: "The Firm" },
-  { href: "#services", label: "Services" },
-  { href: "#values", label: "Values" },
-  { href: "#approach", label: "Approach" },
-  { href: "#clients", label: "Clients" },
-  { href: "#team", label: "Leadership" },
-];
+import { navLinks } from "@/lib/content";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled || open
-          ? "bg-ink/95 backdrop-blur-md shadow-lg shadow-black/20"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <a href="#top" className="flex flex-col leading-none">
-          <span className="font-display text-xl font-bold tracking-wide text-white">
-            ALTIORA <span className="text-bronze">CONSULTS</span>
-          </span>
-          <span className="mt-1 text-[10px] uppercase tracking-[0.35em] text-mist">
-            Solutions for All
-          </span>
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-[color-mix(in_oklab,var(--navy-deep)_85%,transparent)] backdrop-blur-md">
+      <div className="container-x flex h-20 items-center justify-between">
+        <a href="#top" className="flex items-baseline gap-2 text-cream">
+          <span className="font-display text-2xl tracking-tight">Altiora</span>
+          <span className="eyebrow text-gold">Consults</span>
         </a>
 
-        <div className="hidden items-center gap-8 lg:flex">
-          {links.map((l) => (
+        <nav className="hidden items-center gap-10 lg:flex">
+          {navLinks.map((link) => (
             <a
-              key={l.href}
-              href={l.href}
-              className="text-sm font-medium text-white/80 transition-colors hover:text-bronze"
+              key={link.href}
+              href={link.href}
+              className="text-xs uppercase tracking-widest text-cream/70 transition-colors hover:text-gold"
             >
-              {l.label}
+              {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            className="rounded-full bg-bronze px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-bronze-light hover:text-ink"
-          >
-            Contact Us
-          </a>
-        </div>
+        </nav>
+
+        <a
+          href="#contact"
+          className="hidden items-center bg-gold px-5 py-3 text-xs uppercase tracking-widest text-navy-deep transition-colors hover:bg-gold-soft md:inline-flex"
+        >
+          Book a Consultation
+        </a>
 
         <button
+          type="button"
           aria-label="Toggle menu"
           onClick={() => setOpen(!open)}
           className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
         >
           <span
-            className={`h-0.5 w-6 bg-white transition-transform ${
+            className={`h-0.5 w-6 bg-cream transition-transform ${
               open ? "translate-y-2 rotate-45" : ""
             }`}
           />
           <span
-            className={`h-0.5 w-6 bg-white transition-opacity ${
+            className={`h-0.5 w-6 bg-cream transition-opacity ${
               open ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`h-0.5 w-6 bg-white transition-transform ${
+            className={`h-0.5 w-6 bg-cream transition-transform ${
               open ? "-translate-y-2 -rotate-45" : ""
             }`}
           />
         </button>
-      </nav>
+      </div>
 
       {open && (
-        <div className="border-t border-white/10 bg-ink/95 px-6 pb-6 pt-2 backdrop-blur-md lg:hidden">
-          {links.map((l) => (
+        <div className="border-t border-white/5 bg-navy-deep px-6 pb-6 pt-2 lg:hidden">
+          {navLinks.map((link) => (
             <a
-              key={l.href}
-              href={l.href}
+              key={link.href}
+              href={link.href}
               onClick={() => setOpen(false)}
-              className="block border-b border-white/5 py-3 text-sm font-medium text-white/80"
+              className="block border-b border-white/5 py-3 text-xs uppercase tracking-widest text-cream/80"
             >
-              {l.label}
+              {link.label}
             </a>
           ))}
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-4 block rounded-full bg-bronze px-5 py-3 text-center text-sm font-semibold text-white"
+            className="mt-4 block bg-gold px-5 py-3 text-center text-xs uppercase tracking-widest text-navy-deep"
           >
-            Contact Us
+            Book a Consultation
           </a>
         </div>
       )}

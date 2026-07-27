@@ -65,7 +65,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-white/5 bg-navy-deep px-6 pb-6 pt-2 lg:hidden">
+        <div className="border-t border-white/5 bg-navy-deep container-x pb-6 pt-2 lg:hidden">
           {navLinks.map((link) => (
             <a
               key={link.href}

@@ -6,11 +6,25 @@ export const firm = {
   phoneHref: "tel:+2349024321701",
   email: "altioraconsults@gmail.com",
   address: "5 Omobola, Itire, Lawanson, Lagos.",
-  socials: {
-    facebook: "https://facebook.com/Altiora",
-    x: "https://x.com/Altioraconsults",
-    instagram: "https://instagram.com/Altiora",
-  },
+  socials: [
+    {
+      name: "X",
+      href: "https://x.com/altioraconsults/status/1887099583123054765?s=48",
+      handle: "@Altioraconsults",
+    },
+    {
+      name: "TikTok",
+      href: "https://vt.tiktok.com/ZSXTj9rpy/",
+    },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/share/p/1R2MduYQi9/?mibextid=wwXIfr",
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/p/DbLKsf4I4xf/?igsh=c2JscWxsdXVrMW9y",
+    },
+  ],
 };
 
 export const heroCopy =

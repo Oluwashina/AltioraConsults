@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Logo from "@/components/Logo";
 import Navbar from "@/components/Navbar";
+import SocialLinks from "@/components/SocialLinks";
 import {
   approach,
   clientNames,
@@ -28,12 +29,12 @@ function SectionIntro({
 }) {
   return (
     <div className="max-w-3xl">
-      <p className="eyebrow flex items-center gap-4">
+      <p className="eyebrow flex flex-wrap items-center gap-x-4 gap-y-2">
         <span className="gold-rule" />
         {eyebrow}
       </p>
       <h2
-        className={`mt-6 font-display text-4xl leading-[1.05] md:text-5xl ${
+        className={`mt-6 font-display text-3xl leading-[1.05] sm:text-4xl md:text-5xl ${
           light ? "text-cream" : "text-navy-deep"
         }`}
       >
@@ -71,27 +72,27 @@ export default function Home() {
 
         <div className="relative container-x pb-24 pt-40 text-cream md:pb-32">
           <div className="max-w-4xl">
-            <p className="eyebrow mb-8 flex items-center gap-4">
+            <p className="eyebrow mb-8 flex flex-wrap items-center gap-x-4 gap-y-2">
               <span className="gold-rule" />
               Accounting · Tax · Business Process
             </p>
-            <h1 className="font-display text-5xl leading-[0.95] text-cream md:text-7xl lg:text-8xl">
+            <h1 className="font-display text-4xl leading-[0.95] text-cream sm:text-5xl md:text-7xl lg:text-8xl">
               Building strong financial foundations for{" "}
               <em className="not-italic text-gold">sustainable</em> growth.
             </h1>
             <p className="mt-10 max-w-2xl text-lg leading-relaxed text-cream/70">
               {heroCopy}
             </p>
-            <div className="mt-12 flex flex-wrap gap-4">
+            <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <a
                 href="#contact"
-                className="inline-flex items-center bg-gold px-6 py-4 text-xs uppercase tracking-widest text-navy-deep transition-colors hover:bg-gold-soft"
+                className="inline-flex w-full items-center justify-center bg-gold px-6 py-4 text-xs uppercase tracking-widest text-navy-deep transition-colors hover:bg-gold-soft sm:w-auto"
               >
                 Book a Consultation
               </a>
               <a
                 href="#services"
-                className="inline-flex items-center border border-cream/30 px-6 py-4 text-xs uppercase tracking-widest text-cream transition-colors hover:border-gold hover:text-gold"
+                className="inline-flex w-full items-center justify-center border border-cream/30 px-6 py-4 text-xs uppercase tracking-widest text-cream transition-colors hover:border-gold hover:text-gold sm:w-auto"
               >
                 Explore Our Services
               </a>
@@ -112,10 +113,10 @@ export default function Home() {
             <p className="pt-4 font-display text-2xl italic leading-snug text-navy-deep md:text-3xl">
               &ldquo;{firmCopy.quote}&rdquo;
             </p>
-            <div className="mt-12 grid grid-cols-3 gap-8 border-t border-border pt-10">
+            <div className="mt-12 grid grid-cols-1 gap-8 border-t border-border pt-10 sm:grid-cols-3 sm:gap-6">
               {stats.map((stat) => (
                 <div key={stat.label}>
-                  <p className="font-display text-4xl text-gold md:text-5xl">
+                  <p className="font-display text-3xl text-gold sm:text-4xl md:text-5xl">
                     {stat.value}
                   </p>
                   <p className="mt-2 text-sm text-muted-foreground">
@@ -136,11 +137,11 @@ export default function Home() {
         <div className="container-x">
           <div className="mb-20 grid gap-16 lg:grid-cols-12">
             <div className="lg:col-span-6">
-              <p className="eyebrow flex items-center gap-4">
+              <p className="eyebrow flex flex-wrap items-center gap-x-4 gap-y-2">
                 <span className="gold-rule" />
                 Our Core Services
               </p>
-              <h2 className="mt-6 font-display text-4xl leading-[1.05] text-cream md:text-6xl">
+              <h2 className="mt-6 font-display text-3xl leading-[1.05] text-cream sm:text-4xl md:text-6xl">
                 Three disciplines. <br />
                 <em className="not-italic text-gold">Solutions for all.</em>
               </h2>
@@ -156,7 +157,7 @@ export default function Home() {
             {services.map((service) => (
               <article
                 key={service.id}
-                className="group bg-navy-deep p-10 transition-colors hover:bg-navy md:p-12"
+                className="group bg-navy-deep p-8 transition-colors hover:bg-navy sm:p-10 md:p-12"
               >
                 <div className="mb-8 flex items-baseline justify-between">
                   <span className="font-display text-2xl text-gold">
@@ -238,9 +239,9 @@ export default function Home() {
             {approach.map((item) => (
               <li
                 key={item.title}
-                className="grid grid-cols-[auto_1fr] gap-8 border-t border-border py-8"
+                className="grid grid-cols-[auto_1fr] gap-4 border-t border-border py-6 sm:gap-8 sm:py-8"
               >
-                <div className="font-display text-3xl text-gold">
+                <div className="font-display text-2xl text-gold sm:text-3xl">
                   {item.numeral}
                 </div>
                 <div>
@@ -265,11 +266,11 @@ export default function Home() {
         <div className="container-x">
           <div className="grid gap-16 lg:grid-cols-12">
             <div className="lg:col-span-5">
-              <p className="eyebrow flex items-center gap-4">
+              <p className="eyebrow flex flex-wrap items-center gap-x-4 gap-y-2">
                 <span className="gold-rule" />
                 Our Clients
               </p>
-              <h2 className="mt-6 font-display text-4xl leading-[1.05] text-cream md:text-6xl">
+              <h2 className="mt-6 font-display text-3xl leading-[1.05] text-cream sm:text-4xl md:text-6xl">
                 Trusted across{" "}
                 <em className="not-italic text-gold">industries</em>.
               </h2>
@@ -288,12 +289,12 @@ export default function Home() {
             {clientNames.map((name, i) => (
               <div
                 key={name}
-                className="flex items-center gap-4 bg-navy-deep px-6 py-10 md:py-12"
+                className="flex items-center gap-3 bg-navy-deep px-4 py-8 sm:gap-4 sm:px-6 sm:py-10 md:py-12"
               >
-                <span className="font-display text-sm text-gold">
+                <span className="font-display shrink-0 text-sm text-gold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="font-display text-lg text-cream md:text-xl">
+                <span className="font-display text-base leading-snug text-cream sm:text-lg md:text-xl">
                   {name}
                 </span>
               </div>
@@ -313,7 +314,7 @@ export default function Home() {
             />
             <a
               href={`mailto:${firm.email}`}
-              className="mt-10 inline-flex items-center gap-2 bg-gold px-6 py-4 text-xs uppercase tracking-widest text-navy-deep transition-colors hover:bg-gold-soft"
+              className="mt-10 inline-flex w-full items-center justify-center gap-2 bg-gold px-6 py-4 text-xs uppercase tracking-widest text-navy-deep transition-colors hover:bg-gold-soft sm:w-auto sm:justify-start"
             >
               Book a Consultation
               <span aria-hidden>→</span>
@@ -321,11 +322,11 @@ export default function Home() {
           </div>
 
           <div className="lg:col-span-7 lg:border-l lg:border-navy-deep/15 lg:pl-16">
-            <p className="eyebrow flex items-center gap-4">
+            <p className="eyebrow flex flex-wrap items-center gap-x-4 gap-y-2">
               <span className="gold-rule" />
               Contact Information
             </p>
-            <h3 className="mt-6 font-display text-3xl text-navy-deep md:text-4xl">
+            <h3 className="mt-6 font-display text-2xl text-navy-deep sm:text-3xl md:text-4xl">
               Reach us directly.
             </h3>
 
@@ -342,25 +343,17 @@ export default function Home() {
                   href: firm.phoneHref,
                 },
                 { label: "Office", value: firm.address },
-                {
-                  label: "Social",
-                  value: "Altiora · @Altioraconsults",
-                  href: firm.socials.x,
-                },
               ].map((row) => (
                 <div
                   key={row.label}
-                  className="grid grid-cols-[140px_1fr] gap-6 border-b border-navy-deep/10 pb-6"
+                  className="grid grid-cols-1 gap-2 border-b border-navy-deep/10 pb-6 sm:grid-cols-[140px_1fr] sm:gap-6"
                 >
                   <dt className="eyebrow text-navy-deep/60">{row.label}</dt>
-                  <dd className="font-display text-xl text-navy-deep md:text-2xl">
+                  <dd className="break-words font-display text-lg text-navy-deep sm:text-xl md:text-2xl">
                     {row.href ? (
                       <a
                         href={row.href}
                         className="transition-colors hover:text-gold"
-                        {...(row.label === "Social"
-                          ? { target: "_blank", rel: "noopener noreferrer" }
-                          : {})}
                       >
                         {row.value}
                       </a>
@@ -422,6 +415,10 @@ export default function Home() {
               </li>
               <li>{firm.address}</li>
             </ul>
+            <div className="mt-8">
+              <div className="eyebrow mb-4 text-cream/40">Follow us</div>
+              <SocialLinks links={firm.socials} variant="dark" display="icons" />
+            </div>
           </div>
         </div>
 

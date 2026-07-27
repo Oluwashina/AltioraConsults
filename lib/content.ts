@@ -1,6 +1,7 @@
 export const firm = {
   name: "Altiora Consults",
   tagline: "Solutions for All",
+  logo: "/logo.png",
   phone: "0902 4321 701",
   phoneHref: "tel:+2349024321701",
   email: "Altioraconsults@gmail.com",
@@ -12,6 +13,15 @@ export const firm = {
   },
 };
 
+export const heroCopy =
+  "Altiora Consults provides professional consulting in accounting, taxation, and business process optimization, helping organizations make informed decisions, minimize risk, and strengthen performance.";
+
+export const servicesIntro =
+  "Our practice is organised around the questions that most consistently determine financial and operational performance, delivered with technical rigour and practical insight.";
+
+export const valuesKicker =
+  "Six commitments that shape every engagement: the standards we hold ourselves to when the answer is not obvious.";
+
 export const stats = [
   { value: "10+", label: "Years of combined expertise" },
   { value: "3", label: "Core consulting practices" },
@@ -21,7 +31,7 @@ export const stats = [
 export const values = [
   {
     title: "Integrity",
-    text: "The highest ethical standards — honesty, transparency, and accountability in every aspect of our work.",
+    text: "The highest ethical standards built on honesty, transparency, and accountability in every aspect of our work.",
   },
   {
     title: "Professional Excellence",
@@ -29,7 +39,7 @@ export const values = [
   },
   {
     title: "Client Focus",
-    text: "Clients at the centre of everything we do — tailored solutions for their unique needs and long-term success.",
+    text: "Clients at the centre of everything we do, with tailored solutions for their unique needs and long-term success.",
   },
   {
     title: "Confidentiality",
@@ -37,7 +47,7 @@ export const values = [
   },
   {
     title: "Accountability",
-    text: "Ownership of our responsibilities — delivering on our promises with reliability and consistency.",
+    text: "We take ownership of our responsibilities and deliver on our promises with reliability and consistency.",
   },
   {
     title: "Collaboration",
@@ -96,7 +106,7 @@ export const services = [
     number: "01",
     title: "Accounting & Financial Management",
     intro:
-      "End-to-end financial record-keeping, reporting, and advisory — the numbers, kept accurate, timely, and decision-ready.",
+      "End-to-end financial record-keeping, reporting, and advisory. We keep the numbers accurate, timely, and decision-ready.",
     items: [
       "Bookkeeping & financial record management",
       "Financial statements & management accounts",
@@ -117,7 +127,7 @@ export const services = [
     number: "02",
     title: "Tax Advisory & Compliance",
     intro:
-      "Strategic guidance to meet statutory obligations while maximising tax efficiency — planning, compliance, and representation.",
+      "Strategic guidance to meet statutory obligations while maximising tax efficiency through planning, compliance, and representation.",
     items: [
       "Tax planning & advisory",
       "Statutory filings & compliance",
@@ -138,7 +148,7 @@ export const services = [
     number: "03",
     title: "Business Process & Workflow Consultancy",
     intro:
-      "Redesigning how work flows — clearer processes, stronger controls, and systems that promote accountability and stability.",
+      "Redesigning how work flows with clearer processes, stronger controls, and systems that promote accountability and stability.",
     items: [
       "Business process review & optimisation",
       "Process mapping & documentation",
@@ -164,7 +174,7 @@ export const founder = {
 
 export const firmCopy = {
   paragraph1:
-    "At Altiora Consults, we are committed to helping businesses build strong financial foundations, maintain regulatory compliance, and improve operational efficiency. We provide professional consulting services in accounting, taxation, and business process optimization — enabling organizations to make informed decisions, minimize risk, strengthen performance, and achieve sustainable growth.",
+    "At Altiora Consults, we are committed to helping businesses build strong financial foundations, maintain regulatory compliance, and improve operational efficiency. We provide professional consulting services in accounting, taxation, and business process optimization, enabling organizations to make informed decisions, minimize risk, strengthen performance, and achieve sustainable growth.",
   paragraph2:
     "Our expertise spans accounting and financial management, tax advisory and compliance, and business process and workflow consultancy. We work closely with each client to understand their unique needs and deliver practical, cost-effective, results-driven solutions.",
   quote:

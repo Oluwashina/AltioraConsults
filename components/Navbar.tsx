@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Logo from "@/components/Logo";
 import { navLinks } from "@/lib/content";
 
 export default function Navbar() {
@@ -16,9 +17,8 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-[color-mix(in_oklab,var(--navy-deep)_85%,transparent)] backdrop-blur-md">
       <div className="container-x flex h-20 items-center justify-between">
-        <a href="#top" className="flex items-baseline gap-2 text-cream">
-          <span className="font-display text-2xl tracking-tight">Altiora</span>
-          <span className="eyebrow text-gold">Consults</span>
+        <a href="#top" className="shrink-0">
+          <Logo priority className="h-9 w-auto sm:h-10" />
         </a>
 
         <nav className="hidden items-center gap-10 lg:flex">

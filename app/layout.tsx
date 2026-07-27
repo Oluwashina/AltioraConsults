@@ -15,7 +15,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Altiora Consults — Accounting, Tax & Business Process Consultancy",
+  title: "Altiora Consults | Accounting, Tax & Business Process Consultancy",
   description:
     "Altiora Consults helps businesses build strong financial foundations, maintain regulatory compliance, and improve operational efficiency through accounting, tax advisory, and business process consulting. Solutions for All.",
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "Altiora Consults",
   ],
   openGraph: {
-    title: "Altiora Consults — Solutions for All",
+    title: "Altiora Consults | Solutions for All",
     description:
       "Professional consulting in accounting, taxation, and business process optimization.",
     type: "website",

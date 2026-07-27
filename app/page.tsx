@@ -1,14 +1,18 @@
 import Image from "next/image";
+import Logo from "@/components/Logo";
 import Navbar from "@/components/Navbar";
 import {
   approach,
   clientNames,
   firm,
   firmCopy,
+  heroCopy,
   navLinks,
   services,
+  servicesIntro,
   stats,
   values,
+  valuesKicker,
 } from "@/lib/content";
 
 function SectionIntro({
@@ -76,10 +80,7 @@ export default function Home() {
               <em className="not-italic text-gold">sustainable</em> growth.
             </h1>
             <p className="mt-10 max-w-2xl text-lg leading-relaxed text-cream/70">
-              Altiora Consults provides professional consulting in accounting,
-              taxation, and business process optimization — enabling
-              organizations to make informed decisions, minimize risk, and
-              strengthen performance.
+              {heroCopy}
             </p>
             <div className="mt-12 flex flex-wrap gap-4">
               <a
@@ -127,7 +128,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services — dark 3-column cards */}
+      {/* Services */}
       <section
         id="services"
         className="scroll-mt-20 bg-navy-deep py-28 text-cream md:py-40"
@@ -146,9 +147,7 @@ export default function Home() {
             </div>
             <div className="lg:col-span-6 lg:pt-12">
               <p className="text-lg leading-relaxed text-cream/70">
-                Our practice is organised around the questions that most
-                consistently determine financial and operational performance —
-                delivered with technical rigour and practical insight.
+                {servicesIntro}
               </p>
             </div>
           </div>
@@ -195,7 +194,7 @@ export default function Home() {
           <SectionIntro
             eyebrow="Our Values"
             title="What we will not compromise."
-            kicker="Six commitments that shape every engagement — the standards we hold ourselves to when the answer is not obvious."
+            kicker={valuesKicker}
           />
           <div className="mt-20 grid gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {values.map((value, i) => (
@@ -380,10 +379,7 @@ export default function Home() {
       <footer className="bg-navy-deep py-16 text-cream">
         <div className="container-x grid items-start gap-10 md:grid-cols-3">
           <div>
-            <div className="flex items-baseline gap-2">
-              <span className="font-display text-2xl">Altiora</span>
-              <span className="eyebrow text-gold">Consults</span>
-            </div>
+            <Logo className="h-9 w-auto" />
             <p className="mt-4 max-w-xs text-sm text-cream/60">
               Accounting, tax, and business process consultancy. {firm.tagline}.
             </p>

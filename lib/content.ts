@@ -4,7 +4,7 @@ export const firm = {
   logo: "/logo.png",
   phone: "0902 4321 701",
   phoneHref: "tel:+2349024321701",
-  email: "Altioraconsults@gmail.com",
+  email: "altioraconsults@gmail.com",
   address: "5 Omobola, Itire, Lawanson, Lagos.",
   socials: {
     facebook: "https://facebook.com/Altiora",

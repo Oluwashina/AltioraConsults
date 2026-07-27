@@ -5,13 +5,13 @@ type LogoProps = {
   priority?: boolean;
 };
 
-export default function Logo({ className = "h-10 w-auto", priority = false }: LogoProps) {
+export default function Logo({ className = "h-16 w-auto md:h-20", priority = false }: LogoProps) {
   return (
     <Image
-      src="/logo.png"
+      src="/logo-white.png"
       alt="Altiora Consults"
-      width={320}
-      height={90}
+      width={612}
+      height={408}
       priority={priority}
       className={className}
     />

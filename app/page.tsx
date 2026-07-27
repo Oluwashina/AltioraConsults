@@ -372,7 +372,7 @@ export default function Home() {
       <footer className="bg-navy-deep py-16 text-cream">
         <div className="container-x grid items-start gap-10 md:grid-cols-3">
           <div>
-            <Logo className="h-9 w-auto" />
+            <Logo />
             <p className="mt-4 max-w-xs text-sm text-cream/60">
               Accounting, tax, and business process consultancy. {firm.tagline}.
             </p>

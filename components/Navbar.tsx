@@ -18,7 +18,7 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-[color-mix(in_oklab,var(--navy-deep)_85%,transparent)] backdrop-blur-md">
       <div className="container-x flex h-20 items-center justify-between">
         <a href="#top" className="shrink-0">
-          <Logo priority className="h-9 w-auto sm:h-10" />
+          <Logo priority />
         </a>
 
         <nav className="hidden items-center gap-10 lg:flex">
